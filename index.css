@@ -1,30 +1,67 @@
 body,html{
     width: 100%;
     height: 100%;
-    background-color: bisque;
+    background-color: rgb(255, 166, 0);
 }
 .mainlogo{
+    position: relative;
     width: 20%;
-    position: absolute;
     top: 30%;
-    right: 10%;
-
 }
-.divid{
-    position: absolute;
-    width: 3px;
-    height: 50%;
-    background-color: #c3c3c3;
-    top: 30%;
-    left: 50%;
-    border-radius: 50px;
+
+.bg{
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 #about{
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    width: 40%;
-    height: 50%;
     background-color: transparent;
     border-radius: 10PX;
+    width: 50%;
+    text-align: justify;
+    margin: auto;
+}
+.content{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+
+
+.ss{
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.sss{
+    text-align: center;
+    justify-content: center;
+}
+.sponlogo{
+    width: 15%;
+    margin: 5%;
+}
+.spons{
+    text-align: center;
+    text-align: center;
+    align-items: center;
+    /* margin-left: 9%; */
 }

@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+     .faq {
+    margin: 0 auto;
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 30px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px 0;
+    transition: 0.3s ease;
+    max-width: 400px;
+
+}
+
+.faq.active {
+	background-color:transparent;
+
+}
+
+
+
+.faq-title {
+    margin: 0 35px 0 0;
+    color: black;
+}
+
+.faq-text {
+	display: none;
+    margin: 30px 0 0;
+    color: black;
+}
+
+.faq.active .faq-text {
+    display: block;
+    color: black;
+}
+
+.faq-toggle {
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	color: black;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+    padding: 0;
+    color: black;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+}
+
+.faq-toggle:focus {
+	outline: none;
+}
+
+.faq.active .faq-toggle {
+	background-color: #9FA4A8;
+}
+
+.faq-toggle .fa-times {
+	display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+	display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+	color: #83888E;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
+.myDiv{
+  display: flex; flex-direction: column; margin-left: 30%;
+}
+@media screen and (max-width: 767px)
+ {
+     .myDiv
+     {
+         margin: 20px;
+     }
+ } 
+    </style>
+</head>
+<body>
+    
+  
+  
+        <div class="myDiv">
+      
+          <div class="faq ">
+            <h3 class="faq-title">
+                What are the rules?
+            </h3>
+            <p class="faq-text">
+                We want our Hack to be fun and fair to everyone. Your project should be started from scratch and worked on only during the 36 hours, and you may only incorporate outside resources (code, graphics, sound, etc) that are freely licensed and accessible to all participants equally. Of course, maintain a positive, respectful attitude toward your fellow hackers throughout the event. We ask that all attendees follow the MLH Code of Conduct.
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+      
+          <div class="faq">
+            <h3 class="faq-title">
+                What will I need to bring?
+            </h3>
+            <p class="faq-text">
+                Student ID is compulsory and anything you’d need for 36 hours: laptop, charger, deodorant (!), water, etc. You won’t need food; we’ve got you covered there:)
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+      
+          <div class="faq">
+            <h3 class="faq-title">
+                Are hardware hacks allowed?
+            </h3>
+            <p class="faq-text">
+                Yes, of course!
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+      
+          <div class="faq">
+            <h3 class="faq-title">
+                How much does it cost?
+            </h3>
+            <p class="faq-text">
+                Thanks to the generosity of our sponsors, we’re able to put up events like these for free.
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          
+          <div class="faq">
+            <h3 class="faq-title">
+                How many people in a team?
+            </h3>
+            <p class="faq-text">
+                Five sounds good.
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+      
+          <div class="faq">
+            <h3 class="faq-title">
+                What can I build?
+            </h3>
+            <p class="faq-text">
+                You can build whatever your heart desires, whether it’s a web app, mobile app, hardware hack, or an open source tool. 
+                Our main focus is to bring you a learning experience where you can have fun, ask questions, and experiment with technology.                
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+      
+          <div class="faq">
+            <h3 class="faq-title">
+                I still have a question...
+            </h3>
+            <p class="faq-text">
+                We’d be happy to help! Send the inquiry over to robovitics@vit.ac.in and we’ll get back to you as soon as possible or call +91 98673 48865.
+            </p>
+            <button class="faq-toggle">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+        </div>
+        
+        
+      <script>
+          const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+toggle.addEventListener('click', () => {
+  toggle.parentNode.classList.toggle('active');
+});
+});
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
+</html>
