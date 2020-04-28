@@ -11,20 +11,17 @@ body,html{
 
 }
 .divid{
-    position: absolute;
-    -ms-transform: skewY(-40deg);
-    -webkit-transform: skewY(-40deg);
-    transform: skewY(-40deg);
-    width: 55%;
-    height: 10px;
+    position: fixed;
+    width: 10px;
+    height: 100%;
     background-color: black;
-    top: 50%;
-    left: 25%;
+    top: 0%;
+    left: 50%;
     border-radius: 50px;
 }
 #about{
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 5%;
     width: 40%;
     background-color: transparent;
