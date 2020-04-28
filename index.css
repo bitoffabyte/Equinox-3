@@ -174,4 +174,16 @@ justify-items: center;
 {
     flex-direction: column;
 }
+.ss{
+    /* flex-direction: column; */
+}
+.sponlogo{
+    width: 25%;
+}
+.mainlogo{
+    width: 60%;
+}
+#about{
+    width: 90%;
+}
 } 
