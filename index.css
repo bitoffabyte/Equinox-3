@@ -4,6 +4,7 @@ body,html{
     width: 100%;
     height: 100%;
     background-color: rgb(255, 166, 0);
+    font-family: 'Raleway', sans-serif;
 }
 .mainlogo{
     position: relative;
