@@ -85,14 +85,23 @@
 .faq.active .faq-toggle .fa-chevron-down {
 	display: none;
 }
-.myDiv{
-  display: flex; flex-direction: column; margin-left: 30%;
-}
-@media screen and (max-width: 767px)
+.myDiv
+ {
+    position: relative;
+    display: flex;
+     flex-direction: row;
+    box-sizing: border-box;
+    /* margin: 0 auto; */
+    justify-content: center;
+    justify-items: center;
+
+ }
+
+ @media screen and (max-width: 767px)
  {
      .myDiv
      {
-         margin: 20px;
+         flex-direction: column;
      }
  } 
     </style>
@@ -102,7 +111,7 @@
   
   
         <div class="myDiv">
-      
+        <div style="display: flex; flex-direction: column; margin: 20px;">
           <div class="faq ">
             <h3 class="faq-title">
                 What are the rules?
@@ -141,7 +150,8 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-      
+        </div>
+        <div style="display: flex; flex-direction: column; margin: 20px;">
           <div class="faq">
             <h3 class="faq-title">
                 How much does it cost?
@@ -181,22 +191,20 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-      
-          <div class="faq">
-            <h3 class="faq-title">
-                I still have a question...
-            </h3>
-            <p class="faq-text">
-                We’d be happy to help! Send the inquiry over to robovitics@vit.ac.in and we’ll get back to you as soon as possible or call +91 98673 48865.
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-chevron-down"></i>
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-
         </div>
-        
+        </div>
+        <div class="faq" style="display: block; margin-left: auto;margin-right: auto;">
+          <h3 class="faq-title">
+              I still have a question...
+          </h3>
+          <p class="faq-text">
+              We’d be happy to help! Send the inquiry over to robovitics@vit.ac.in and we’ll get back to you as soon as possible or call +91 98673 48865.
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
         
       <script>
           const toggles = document.querySelectorAll('.faq-toggle');
