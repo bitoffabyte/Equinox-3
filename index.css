@@ -6,8 +6,9 @@ body,html{
 .mainlogo{
     width: 20%;
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 30%;
+    right: 10%;
+
 }
 .divid{
     position: absolute;
@@ -15,17 +16,17 @@ body,html{
     -webkit-transform: skewY(-40deg);
     transform: skewY(-40deg);
     width: 55%;
-    height: 30px;
-    background-color: aqua;
+    height: 10px;
+    background-color: black;
     top: 50%;
     left: 25%;
     border-radius: 50px;
 }
 #about{
     position: absolute;
-    top: 50%;
-    right: 2%;
+    top: 15%;
+    left: 5%;
     width: 40%;
-    background-color: burlywood;
+    background-color: transparent;
     border-radius: 10PX;
 }
