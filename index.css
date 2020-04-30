@@ -38,12 +38,12 @@ html {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 5px;  /* Remove scrollbar space */
+    background: lightgray;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    background: rgb(252, 195, 89);
 }
 
 
@@ -55,17 +55,18 @@ html {
     text-align: center;
     align-items: center;
     justify-content: center;
-
-    
 }
+
 .sss{
     text-align: center;
     justify-content: center;
 }
+
 .sponlogo{
     width: 15%;
     margin: 3%;
 }
+
 .spons{
     margin: auto;
     text-align: center;
@@ -179,7 +180,7 @@ justify-items: center;
     flex-direction: column;
 }
 .ss{
-    /* flex-direction: column; */
+     /*flex-direction: column; */
 }
 .sponlogo{
     width: 25%;
@@ -191,3 +192,70 @@ justify-items: center;
     width: 90%;
 }
 } 
+/*SOCIAL MEDIA*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width:auto;
+    display:block;
+    margin: -10px;
+    background: #535051;
+    color: #fff;
+    height: 340px;
+text-align: center;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 5px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+   /* height: 00px;*/
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 17px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #535051;
+    border-radius: 350px;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+
+
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #535051;
+    border-radius: 350px;
+}
+.fa-instagram:hover {
+     background-image: linear-gradient(rgb(96, 13, 228),rgb(255, 0, 221), yellow);
+     transition: .5s;
+}
