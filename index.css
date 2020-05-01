@@ -20,7 +20,7 @@ body,html{
     height: 100%;
     position: fixed;
     z-index: -1;
-    background-image: url('assets/bg_up.png');/*copy and paste the mage to assets and change the name here*/
+    background-image: url('assets/bg_up1.png');/*copy and paste the mage to assets and change the name here*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
