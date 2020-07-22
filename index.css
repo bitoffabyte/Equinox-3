@@ -105,10 +105,32 @@ html {
     /* margin-left: 9%; */
 }
 
-
-
-
-
+#email{
+    display: inline;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    height: 45px;
+    line-height: 45px;  
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: rgba(0,0,0,.4);
+    background-color: transparent;
+}
+[type='text']:focus {
+    outline: none;
+    border-color: #53CACE;
+  }
+.sb{
+    margin: 0;
+    height: 45px;
+    line-height: 45px;  
+    background-color: transparent;
+    border-color: transparent;
+    font-size: larger;
+    margin-top: 50px;
+}
 
 .faq1{
     display: flex;
