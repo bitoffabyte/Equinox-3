@@ -44,7 +44,7 @@ body,html{
     height: 60%;
     width: auto;
      top: 30%;
-    padding: 5%;
+    padding-bottom: 5%;
 }
 h1{
     font-family: 'Raleway', sans-serif;
@@ -122,15 +122,6 @@ html {
     outline: none;
     border-color: #53CACE;
   }
-.sb{
-    margin: 0;
-    height: 45px;
-    line-height: 45px;  
-    background-color: transparent;
-    border-color: transparent;
-    font-size: larger;
-    margin-top: 50px;
-}
 
 .faq1{
     display: flex;
@@ -311,4 +302,115 @@ ul.social-icons {
 .fa-instagram:hover {
      background-image: linear-gradient(rgb(96, 13, 228),rgb(255, 0, 221), yellow);
      transition: .5s;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border-style: none;
+    background: transparent;
+    outline: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 100% 0
+    }
+}
+
+.EmailInput {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 1.4rem 1.6rem 1.6rem;
+    font-size: 5px;
+}
+
+.EmailInput:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #f9ab17, #feee05, #2485af, #2485af, #feee05, #f9ab17);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.EmailInput input {
+    flex-grow: 1;
+    font-size: 5em;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    width: 80%;
+
+}
+.EmailInput button {
+    color: #fde975;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    transition: color .25s;
+
+
+}
+
+.EmailInput button:hover {
+    color: #ffffff;
+}
+
+.aaaa {
+    font-size: 40px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .EmailInput  {
+        width: 95%;
+    padding: 0;
+
+    }
+    .EmailInput input {
+        flex-grow: 1;
+        font-size: 3em;
+        line-height: 1.4rem;
+        vertical-align: middle;
+        width: 80%;
+    
+    }
+    .EmailInput button:hover {
+        color: #fde975;
+    }
+
 }
