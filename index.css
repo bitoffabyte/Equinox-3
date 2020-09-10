@@ -98,6 +98,12 @@ html {
     width: 15%;
     margin: 3%;
 }
+.sponlogo:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .3s;
+}
 
 .spons {
     margin: auto;
