@@ -450,13 +450,12 @@ button:hover {
 }
 
 #devfolio-apply-now {
-    margin: 10% auto;
-
     -ms-flex-align: center;
     -webkit-box-align: center;
+    margin: 10% auto;
     align-items: center;
     background-color: #3770ff;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     color: #ffffff;
     cursor: pointer;
@@ -469,6 +468,7 @@ button:hover {
     font-weight: 600;
     padding: 12px 20px;
     text-align: center;
+    transform: scale(2);
 }
 
 #devfolio-apply-now:not([disabled]) {
@@ -477,9 +477,4 @@ button:hover {
 
 #devfolio-apply-now:hover {
     background-color: #2954bf !important;
-}
-@media screen and (max-width: 767px) {
-    #devfolio-apply-now {
-        margin-left: 20%;
-    }
 }
