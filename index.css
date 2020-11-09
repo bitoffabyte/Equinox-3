@@ -197,6 +197,13 @@ html {
     .faq-item {
         margin: 1rem 0rem;
     }
+
+}
+@media screen and (max-width: 707px) {
+    .asdasd{
+        font-size: 40px; 
+        margin-top: 30%;
+    }
 }
 
 .myDiv {
@@ -208,6 +215,7 @@ html {
     justify-content: center;
     justify-items: center;
 }
+
 
 @media screen and (max-width: 1207px) {
     .myDiv {
@@ -228,9 +236,10 @@ html {
     #about {
         width: 90%;
     }
-#devfolio-apply-now {
-transform: scale(1);
-}
+    #devfolio-apply-now {
+    transform: scale(1);
+
+    }
 }
 /*SOCIAL MEDIA*/
 a {
