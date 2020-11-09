@@ -48,7 +48,7 @@ html {
     position: relative;
     height: 60%;
     width: auto;
-    top: 30%;
+    top: 10%;
     padding-bottom: 5%;
 }
 h1 {
@@ -228,6 +228,9 @@ html {
     #about {
         width: 90%;
     }
+#devfolio-apply-now {
+transform: scale(1);
+}
 }
 /*SOCIAL MEDIA*/
 a {
