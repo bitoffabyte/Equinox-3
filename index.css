@@ -199,10 +199,10 @@ html {
     }
 
 }
-@media screen and (max-width: 707px) {
+@media screen and (max-width: 1120px) {
     .asdasd{
         font-size: 40px; 
-        margin-top: 30%;
+        margin-top: 15%;
     }
 }
 
@@ -234,7 +234,7 @@ html {
     .mainlogo {
         position: relative;
         bottom: 23%;
-        height: 50%;
+        height: 40%;
         width: auto;
     }
     #about {
@@ -243,6 +243,17 @@ html {
     #devfolio-apply-now {
     transform: scale(1);
 
+    }
+}
+@media screen and (min-width: 2500px)
+{
+    .asdasd
+    {
+       margin-top: 10%;
+    }
+    .asdasd1
+    {
+       margin-top: 3%;
     }
 }
 /*SOCIAL MEDIA*/
@@ -260,13 +271,19 @@ ul {
     list-style: none;
 }
 .footer-social-icons {
-    width: auto;
+    width: 100%;
     display: block;
-    margin: -10px;
+
     background: #535051;
     color: #fff;
     height: 340px;
     text-align: center;
+}
+@media screen and (max-width: 290px)
+{
+    .footer-social-icons {
+        width: 110%;
+    }
 }
 .social-icon {
     color: #fff;
@@ -322,16 +339,14 @@ ul.social-icons {
     box-sizing: inherit;
 }
 
-a {
-    text-decoration: none;
-}
 
-input {
-    border-style: none;
-    background: transparent;
-    outline: none;
-}
-
+input:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.0);
+    box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.0);
+  }
+   
 button {
     padding: 2%;
     background: none;
@@ -393,6 +408,14 @@ button {
     line-height: 2.4rem;
     vertical-align: middle;
     width: 80%;
+    border-style: none;
+    background: transparent;
+    outline: none;
+    border-width: 0px;
+    border: none;
+    outline: none;
+    text-decoration-line: none;
+    
 }
 .EmailInput button {
     font-size: 2.4rem;
