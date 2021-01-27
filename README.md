@@ -1,2 +1,2 @@
 # Equinox-3
-https://rootnarayan.github.io/Equinox-3/
+https://bitoffabyte.github.io/Equinox-3/
