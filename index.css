@@ -482,6 +482,8 @@ button:hover {
 	-ms-flex-align: center;
 	-webkit-box-align: center;
 	margin: 5% auto;
+	position: relative;
+
 	align-items: center;
 	background-color: #3770ff;
 	border-radius: 3px;
