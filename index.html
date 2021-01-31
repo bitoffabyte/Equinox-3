@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EQUINOX</title>
+		<script src="https://www.gstatic.com/firebasejs/4.30/firebase-app.js"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EQUINOX</title>
-   <script src="https://www.gstatic.com/firebasejs/4.30/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+		<link rel="icon" href="assets/logo1.png" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="index.css" />
+	</head>
 
- <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
-  <link rel="icon" href="assets/logo1.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-</head>
+	<body>
+		<div class="background-img"></div>
 
-<body>
-  <div class="background-img"></div>
-
-  <div class="bgiii">
-    <img src="assets/logo.png" class="mainlogo" alt="centered image">
-    <h1 class = 'asdasd'>Coming Soon | March 2021</h1>
-    <div class = 'asdasd1' style=" color: rgb(80, 80, 80);text-align: center;font-size: 23px;top: -3%;position: relative; "> 26-28 March
-    </div>
-    <div  class="apply-button" data-hackathon-slug="equinox21" data-button-theme="light" style="height: 44px; width: 312px; postion:relative; z-index:99;"></div>
-   <!--<button id="devfolio-apply-now" onclick="window.location.href='https://devfolio.co/signin'"><svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="#fff"viewBox="0 0 115.46 123.46" style="height:18px;width:18px;margin-right:8px"><path d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z" /><path d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/></svg>Apply with Devfolio</button>--> 
-   <!-- <form id="ContactForm">
+		<div class="bgiii">
+			<img src="assets/logo.png" class="mainlogo" alt="centered image" />
+			<h1 class="asdasd">Coming Soon | March 2021</h1>
+			<div
+				class="asdasd1"
+				style="
+					color: rgb(80, 80, 80);
+					text-align: center;
+					font-size: 23px;
+					top: -3%;
+					position: relative;
+				"
+			>
+				26-28 March
+			</div>
+			<div
+				class="apply-button"
+				id="devfolio-apply-now"
+				data-button-theme="light"
+				style="
+					height: 44px;
+					width: 312px;
+					postion: relative;
+					z-index: 99;
+				"
+			></div>
+			<!--<button id="devfolio-apply-now" onclick="window.location.href='https://devfolio.co/signin'"><svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="#fff"viewBox="0 0 115.46 123.46" style="height:18px;width:18px;margin-right:8px"><path d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z" /><path d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/></svg>Apply with Devfolio</button>-->
+			<!-- <form id="ContactForm">
 
       <div class="EmailInput">
         <input style="font-size: 20px;color: black;" type="email"  id="email" placeholder="Enter your Email to Pre-Register and stay Updated!"></input>
@@ -43,230 +65,310 @@
           </button>
         </form>
       </div> -->
+		</div>
+		<pre></pre>
+		<div class="content0fpage">
+			<div class="content">
+				<div id="about">
+					<h1 align="center">
+						<!---<img src='assets/about1.png' class="h1logo">-->About
+					</h1>
+					<div style="font-weight: 500">
+						Equinox is a 36-Hour hackathon in which the
+						participants’ ideas will not just be limited to problem
+						statements based on Web development, hardware,
+						Artificial Intelligence etc. The hack aims to crank the
+						creative cogs of the participants. You have the
+						opportunity and the resources to express your
+						creativity, ingenuity and determination to explore
+						anything you want. Whether you’re new to hacks or a
+						seasoned pro, there’s something for everyone! You’re
+						welcome with or without a team. We will provide
+						resources and mentors for your aid. Also, did we mention
+						exciting goodies and takeaways? The domains of the hack
+						include Robotics, Industrial Automation, Healthcare,
+						Financial-Technology and open innovation. Let us make
+						you an offer you can’t refuse: Timely and precise
+						reviews for each participant and ample time with the
+						judges. So, what are you waiting for? Come build using
+						hardware, software, or anything you want with other
+						hackers! You don’t have to know how to code to be a
+						hacker. Hackers can be students, designers, or just any
+						tech-lover out there!
+					</div>
+				</div>
+				<br /><br /><br />
 
-  </div>
-  <pre>
+				<pre></pre>
+				<h1>FAQ</h1>
+				<div class="faqq">
+					<div class="faq1">
+						<div class="faq">
+							<div class="faq-item">
+								<div class="faq-item-header">
+									What are the rules?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										We want our Hack to be fun and fair to
+										everyone. Your project should be started
+										from scratch and worked on only during
+										the 36 hours, and you may only
+										incorporate outside resources (code,
+										graphics, sound, etc) that are freely
+										licensed and accessible to all
+										participants equally. Of course,
+										maintain a positive, respectful attitude
+										toward your fellow hackers throughout
+										the event. We ask that all attendees
+										follow the MLH Code of Conduct.
+									</div>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item-header">
+									What will I need to bring?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										Student ID is compulsory and anything
+										you’d need for 36 hours: laptop,
+										charger, deodorant (!), water, etc. You
+										won’t need food; we’ve got you covered
+										there:)
+									</div>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item-header">
+									Are hardware hacks allowed?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										Yes, of course!
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="faq">
+							<div class="faq-item">
+								<div class="faq-item-header">
+									How much does it cost?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										Thanks to the generosity of our
+										sponsors, we’re able to put up events
+										like these for free.
+									</div>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item-header">
+									How many people in a team?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										Five sounds good.
+									</div>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item-header">
+									What can I build?
+								</div>
+								<div class="faq-item-body">
+									<div class="faq-item-body-content">
+										You can build whatever your heart
+										desires, whether it’s a web app, mobile
+										app, hardware hack, or an open source
+										tool. Our main focus is to bring you a
+										learning experience where you can have
+										fun, ask questions, and experiment with
+										technology.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<div class="faq-item" style="width: 90%; margin: 5px auto">
+						<div class="faq-item-header">
+							I still have a question...
+						</div>
+						<div class="faq-item-body">
+							<div class="faq-item-body-content">
+								We’d be happy to help! Send the inquiry over to
+								robovitics@vit.ac.in and we’ll get back to you
+								as soon as possible or call +91 98673 48865.
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<pre></pre>
 
+				<pre></pre>
+				<div id="spon">
+					<h1 align="center">Our Sponsors</h1>
+					<div class="spons">
+						<div class="ss">
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/GitHub_Logo.svg"
+								alt=""
+								onclick="location.href='https://github.com/'"
+							/>
+						</div>
+						<div class="ss">
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/amulya.png"
+								alt=""
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/Devfolio.svg"
+								alt=""
+								onclick="location.href='https://devfolio.co/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/Coding_Ninjas_Logo_3.png"
+								alt=""
+								onclick="location.href='https://www.codingninjas.com/'"
+							/>
 
-      </pre>
-  <div class="content0fpage">
+							<!--<img class="sponlogo" src="assets/sponsors logo/209-2096309_texas-instruments-logo-png-transparent-texas-instruments-logo.png" alt="">-->
+						</div>
+						<div class="ss">
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/portis_logo.svg"
+								alt=""
+								onclick=" location.href='https://www.portis.io/'"
+							/>
 
+							<!--<img class="sponlogo" src="assets/sponsors logo/fold.svg" alt="" onclick="location.href='https://fold.money'" >-->
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/matic.svg"
+								alt=""
+								onclick="location.href='https://matic.network/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/Tezos_Logo-Colored.svg"
+								alt=""
+								onclick="location.href='https://tezos.com/'"
+							/>
+						</div>
+						<div class="ss">
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/DO_Logo_horizontal_blue.svg"
+								alt=""
+								onclick="location.href='https://www.digitalocean.com/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/wolfram-corporate-logo-stacked-lg-1.png"
+								alt=""
+								onclick="location.href='https://www.wolfram.com/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/black-horizontal.svg"
+								alt=""
+								onclick="location.href='https://www.framer.com/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/Bugsee-Logo.svg"
+								alt=""
+								onclick="location.href='https://www.bugsee.com'"
+							/>
+						</div>
 
-
-    <div class="content">
-      <div id="about">
-        <h1 align=center>
-          <!---<img src='assets/about1.png' class="h1logo">-->About</h1>
-        <div style="font-weight: 500;">
-          Equinox is a 36-Hour hackathon in which the participants’ ideas will not just be limited to problem statements
-          based on Web development, hardware, Artificial Intelligence etc. The hack aims to crank the creative cogs of
-          the participants. You have the opportunity and the resources to express your creativity, ingenuity and
-          determination to explore anything you want.
-          Whether you’re new to hacks or a seasoned pro, there’s something for everyone! You’re welcome with or without
-          a team. We will provide resources and mentors for your aid. Also, did we mention exciting goodies and
-          takeaways?
-          The domains of the hack include Robotics, Industrial Automation, Healthcare, Financial-Technology and open
-          innovation. Let us make you an offer you can’t refuse: Timely and precise reviews for each participant and
-          ample time with the judges.
-          So, what are you waiting for? Come build using hardware, software, or anything you want with other hackers!
-          You don’t have to know how to code to be a hacker. Hackers can be students, designers, or just any tech-lover
-          out there!
-
-        </div>
-      </div>
-      <br><br><br>
-      
-      <pre>
-
-
-
-
-          </pre>
-      <h1>FAQ</h1>
-      <div class='faqq'>
-        <div class='faq1'>
-          <div class="faq">
-            <div class="faq-item">
-              <div class="faq-item-header">
-                What are the rules?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  We want our Hack to be fun and fair to everyone. Your project should be started from scratch and
-                  worked on
-                  only during the 36 hours, and you may only incorporate outside resources (code, graphics, sound,
-                  etc) that
-                  are freely licensed and accessible to all participants equally. Of course, maintain a positive,
-                  respectful
-                  attitude toward your fellow hackers throughout the event. We ask that all attendees follow the
-                  MLH
-                  Code of
-                  Conduct.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-item-header">
-                What will I need to bring?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  Student ID is compulsory and anything you’d need for 36 hours: laptop, charger, deodorant (!),
-                  water, etc.
-                  You won’t need food; we’ve got you covered there:)
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-item-header">
-                Are hardware hacks allowed?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  Yes, of course!
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq">
-
-            <div class="faq-item">
-              <div class="faq-item-header">
-                How much does it cost?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  Thanks to the generosity of our sponsors, we’re able to put up events like these for free.
-
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-item-header">
-                How many people in a team?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  Five sounds good.
-
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-item-header">
-                What can I build?
-              </div>
-              <div class="faq-item-body">
-                <div class="faq-item-body-content">
-                  You can build whatever your heart desires, whether it’s a web app, mobile app, hardware hack, or
-                  an
-                  open
-                  source tool.
-                  Our main focus is to bring you a learning experience where you can have fun, ask questions, and
-                  experiment
-                  with technology.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" style="width: 90%; margin:5px auto;">
-          <div class="faq-item-header">
-            I still have a question...
-          </div>
-          <div class="faq-item-body">
-            <div class="faq-item-body-content">
-              We’d be happy to help! Send the inquiry over to robovitics@vit.ac.in and we’ll get back to you
-              as
-              soon as
-              possible or call +91 98673 48865.
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <pre>
-
-
-
-
-      </pre>
-
-      <pre>
-
-
-
-
-      </pre>
-      <div id="spon">
-        <h1 align=center>Our Sponsors</h1>
-        <div class="spons">
-          <div class="ss">
-            <img class="sponlogo" src="assets/sponsors logo/GitHub_Logo.svg" alt="" onclick="location.href='https://github.com/'">
-          </div>
-          <div class="ss">
-            <img class="sponlogo" src="assets/sponsors logo/amulya.png" alt="">
-            <img class="sponlogo" src="assets/sponsors logo/Devfolio.svg" alt="" onclick="location.href='https://devfolio.co/'"> 
-            <img class="sponlogo" src="assets/sponsors logo/Coding_Ninjas_Logo_3.png" alt="" onclick="location.href='https://www.codingninjas.com/'">  
-            
-            <!--<img class="sponlogo" src="assets/sponsors logo/209-2096309_texas-instruments-logo-png-transparent-texas-instruments-logo.png" alt="">-->
-          </div>
-          <div class="ss">
-            <img class="sponlogo" src="assets/sponsors logo/portis_logo.svg" alt=""  onclick=" location.href='https://www.portis.io/'" >
-             
-            <!--<img class="sponlogo" src="assets/sponsors logo/fold.svg" alt="" onclick="location.href='https://fold.money'" >-->
-            <img class="sponlogo" src="assets/sponsors logo/matic.svg" alt="" onclick="location.href='https://matic.network/'" >
-            <img class="sponlogo" src="assets/sponsors logo/Tezos_Logo-Colored.svg" alt="" onclick="location.href='https://tezos.com/'" >
-          </div>
-          <div class="ss">
-            <img class="sponlogo" src="assets/sponsors logo/DO_Logo_horizontal_blue.svg" alt="" onclick="location.href='https://www.digitalocean.com/'">
-            <img class="sponlogo" src="assets/sponsors logo/wolfram-corporate-logo-stacked-lg-1.png" alt="" onclick="location.href='https://www.wolfram.com/'">
-            <img class="sponlogo" src="assets/sponsors logo/black-horizontal.svg" alt="" onclick="location.href='https://www.framer.com/'" >
-            <img class="sponlogo" src="assets/sponsors logo/Bugsee-Logo.svg" alt="" onclick="location.href='https://www.bugsee.com'" >
-
-          </div>
-          
-          <div class="ss">
-            <img class="sponlogo" src="assets/sponsors logo/taskade-logo.png" alt="" onclick="location.href='https://www.taskade.com/'">
-            <img class="sponlogo" src="assets/sponsors logo/balsamiq-logo-noborder-screen.png" alt="" onclick="location.href='https://balsamiq.com/'">
-            <img class="sponlogo"src="assets/sponsors logo/sashido-logo-for sites.png"alt="" onclick="location.href='https://www.sashido.io/en/'">
-            <img class="sponlogo" src="assets/sponsors logo/logo_black.png" alt="" onclick="location.href='https://www.voiceflow.com/'">
-          </div>
-<!--
+						<div class="ss">
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/taskade-logo.png"
+								alt=""
+								onclick="location.href='https://www.taskade.com/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/balsamiq-logo-noborder-screen.png"
+								alt=""
+								onclick="location.href='https://balsamiq.com/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/sashido-logo-for sites.png"
+								alt=""
+								onclick="location.href='https://www.sashido.io/en/'"
+							/>
+							<img
+								class="sponlogo"
+								src="assets/sponsors logo/logo_black.png"
+								alt=""
+								onclick="location.href='https://www.voiceflow.com/'"
+							/>
+						</div>
+						<!--
           <div class="ss">
             <img class="sponlogo" src="assets/sponsors logo/1200px-Apollo_Hospitals_Svg_Logo.svg.png" alt="">
             <img class="sponlogo" src="assets/sponsors logo/maxembedd-logo1.png" alt="">
           </div>
 -->
-        </div>
-      </div>
-    </div>
-    
+					</div>
+				</div>
+			</div>
 
-    <div class="footer-social-icons qwerty">
-      <pre>
-      </pre>
-      <h1 style="text-align: center; color: white;font-size: 35px">Social Media</h1>
-      <ul class="social-icons" style="text-align: center;">
-        <li><a href="https://www.facebook.com/robovitics/" target="_blank" class="social-icon"> <i
-              class="fa fa-facebook fa-2x text-primary mx-3"></i></a></li>
-        <li><a href="https://instagram.com/equinox_robovitics?igshid=28dks02s9hul" target="_blank" class="social-icon">
-            <i class="fa fa-instagram fa-2x text-primary mx-3"></i></a></li>
-      </ul>
-      <h1 style="text-align: center; color: white; font-size: 35px;">Contact Us</h1>
-      <p style="font-weight: 600;font-size: medium;">Email : equinox.robovitics@gmail.com</p>
-      <p style="font-weight: 600;font-size: medium;">Phone: +91 98673 48865</p>
-    </div>
-  </div>
-  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-  <script src="index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-</body>
-
+			<div class="footer-social-icons qwerty">
+				<pre></pre>
+				<h1 style="text-align: center; color: white; font-size: 35px">
+					Social Media
+				</h1>
+				<ul class="social-icons" style="text-align: center">
+					<li>
+						<a
+							href="https://www.facebook.com/robovitics/"
+							target="_blank"
+							class="social-icon"
+						>
+							<i
+								class="fa fa-facebook fa-2x text-primary mx-3"
+							></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="https://instagram.com/equinox_robovitics?igshid=28dks02s9hul"
+							target="_blank"
+							class="social-icon"
+						>
+							<i
+								class="fa fa-instagram fa-2x text-primary mx-3"
+							></i
+						></a>
+					</li>
+				</ul>
+				<h1 style="text-align: center; color: white; font-size: 35px">
+					Contact Us
+				</h1>
+				<p style="font-weight: 600; font-size: medium">
+					Email : equinox.robovitics@gmail.com
+				</p>
+				<p style="font-weight: 600; font-size: medium">
+					Phone: +91 98673 48865
+				</p>
+			</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script src="index.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+	</body>
 </html>
